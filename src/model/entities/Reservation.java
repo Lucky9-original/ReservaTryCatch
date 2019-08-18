@@ -36,7 +36,7 @@ public class Reservation {
     }
     
     public long duration(){
-        long diff = this.checkIn.getTime() - this.checkOut.getTime();
+        long diff = this.checkOut.getTime() - this.checkIn.getTime();
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
     }
     
